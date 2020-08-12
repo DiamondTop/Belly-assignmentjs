@@ -11,6 +11,7 @@ from sqlalchemy import create_engine
 from flask import Flask, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 
+
 app = Flask(__name__)
 
 
@@ -37,9 +38,14 @@ def index():
     return render_template("index.html")
 
 
+
+
+
+
 @app.route("/names")
 def names():
     """Return a list of sample names."""
+    
 
     # Use Pandas to perform the sql query
     stmt = db.session.query(Samples).statement
@@ -79,6 +85,7 @@ def sample_metadata(sample):
     return jsonify(sample_metadata)
 
 
+
 @app.route("/samples/<sample>")
 def samples(sample):
     """Return `otu_ids`, `otu_labels`,and `sample_values`."""
@@ -99,6 +106,8 @@ def samples(sample):
         "otu_labels": sample_data.otu_label.tolist(),
     }
     return jsonify(data)
+
+
 
 
 if __name__ == "__main__":
