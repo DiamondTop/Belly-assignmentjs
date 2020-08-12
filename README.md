@@ -1,5 +1,7 @@
 # Belly Button Biodiversity
 
+I used Plotly to create charts exploring a database saved as a sqlite file. Website served using Flask and is deployed on Heroku. https://bellyassignment.herokuapp.com/
+
 ![Bacteria by filterforge.com](Images/bacteria_by_filterforgedotcom.jpg)
 
 In this assignment, you will build an interactive dashboard to explore the [Belly Button Biodiversity DataSet](http://robdunnlab.com/projects/belly-button-biodiversity/).
